@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    color-scheme: dark;
+}
+
+html, body {
+    background: #222;
+    color: #fff;
+    height: 100%;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background: #282828;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    font-size: 18px;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+main {
+    flex-grow: 1;
+    height: 100%;
+    margin-left: 250px;
+    padding: 0 10px;
+    background: #333;
+    border-right: 1px solid #000;
+    overflow-y: auto;
+    text-wrap: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav .burger {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    text-decoration: none;
+    font-family: Tahoma, sans-serif;
+    color: #aaa;
+    -webkit-user-drag: none;
+}
+
+.sidebar nav .burger a {
+    padding: 0 0 0 40px;
+}
+
+.sidebar nav a:hover {
+    color: gainsboro;
+}
+
+.sidebar nav a:hover svg {
+    fill: gainsboro;
+}
+
+pre {
+    background: #282828;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+svg {
+    padding: 0 10px;
+    width: 30px;
+    height: 30px;
+    fill: #aaa;
+}
+
+@media (max-width: 900px) {
+
+    .text__link, .sidebar nav .burger {
+        display: none;
+        margin: 0;
+    }
+
+    .sidebar nav a {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .wrapper {
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+    main{
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #000;
+    }
+
+    .sidebar, .sidebar nav, .sidebar nav .burger {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav a{
+        width: 100%;
+    }
+}
